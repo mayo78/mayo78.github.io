@@ -1,0 +1,102 @@
+{
+	"storyName": "freeplay",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "week1",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": true,
+	"weekCharacters": [
+		"bambi",
+		"bf",
+		"gf"
+	],
+	"songs": [
+		[
+			"screwed",
+			"screw",
+			[
+				255,
+				255,
+				255
+			]
+		],
+		[
+			"trolling-me",
+			"bambinorm",
+			[
+				255,
+				255,
+				255
+			]
+		],
+		[
+			"blunt",
+			"blu",
+			[
+				255,
+				255,
+				255
+			]
+		],
+		[
+			"addiction",
+			"bluphase2",
+			[
+				255,
+				255,
+				255
+			]
+		],
+		[
+			"zero-division",
+			"zero",
+			[
+				255,
+				255,
+				255
+			]
+		],
+		[
+			"expurgation",
+			"3d",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"talladega",
+			"mask",
+			[
+				255,
+				255,
+				255
+			]
+		],
+		[
+			"delin",
+			"dave3d",
+			[
+				0,
+				0,
+				240
+			]
+		],
+		[
+			"deafening",
+			"pain",
+			[
+				0,
+				0,
+				0
+			]
+		]
+	],
+	"weekName": "bambi"
+}

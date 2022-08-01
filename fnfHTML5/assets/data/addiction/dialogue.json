@@ -1,0 +1,25 @@
+{
+	"dialogue": [
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "ight you done now?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "blu",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Yeah. Now we will start the battle of rap."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "excited",
+			"text": "gaming                                                 t"
+		}
+	]
+}

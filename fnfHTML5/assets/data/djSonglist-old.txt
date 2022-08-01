@@ -1,0 +1,11 @@
+internal,house,dave,good
+internal,insanity,dave,bad
+external,im-angey,dave-angey,bad
+internal,polygonized,dave-angey,bad
+internal,bonus-song,dave,good
+internal,splitathon,dave,good
+external,a-new-day,dave,good
+external,good-ending,bf-old,good
+external,bad-ending,bf-old,bad
+internal,old-insanity,dave-old,bad
+internal,furiosity,dave-angey,good

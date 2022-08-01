@@ -1,0 +1,25 @@
+{
+	"dialogue": [
+		{
+			"speed": 0.05,
+			"portrait": "blu",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Well well well, Boyfriend from the Friday Night Funkin' game. You've come to my domain to try and challenge me?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "pissed",
+			"text": "yeah basically"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "blu",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Alright then, lemme finish this fat blunt first."
+		}
+	]
+}

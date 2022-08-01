@@ -1,0 +1,66 @@
+{
+	"storyName": "freeplay",
+	"hideFreeplay": true,
+	"weekBackground": "stage",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"weekCharacters": [
+		"bambi",
+		"bf",
+		"gf"
+	],
+	"songs": [
+		[
+			"outrage",
+			"bambi",
+			[
+				255,
+				255,
+				255
+			]
+		],
+		[
+			"enshrouded",
+			"bambi",
+			[
+				255,
+				255,
+				255
+			]
+		],
+		[
+			"nomophobia",
+			"bambi",
+			[
+				255,
+				255,
+				255
+			]
+		],
+		[
+			"kalampokiphobia",
+			"bambi",
+			[
+				255,
+				255,
+				255
+			]
+		],
+		[
+			"phonophobia",
+			"bambi",
+			[
+				255,
+				255,
+				255
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "week1"
+}
