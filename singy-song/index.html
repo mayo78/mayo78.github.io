@@ -11,17 +11,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="authoring-tool" content="Adobe_Animate_CC">
-<title>OFFICIAL MAYO78 WEBSITE!</title>
+<title>Untitled-4</title>
 <!-- write your code here -->
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
-<script src="header html5.js?1680289040750"></script>
+<script src="Untitled-4.js?1680296958168"></script>
 <script>
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
 	canvas = document.getElementById("canvas");
 	anim_container = document.getElementById("animation_container");
 	dom_overlay_container = document.getElementById("dom_overlay_container");
-	var comp=AdobeAn.getComposition("72F304B2120E924C89423550DDB38397");
+	var comp=AdobeAn.getComposition("C009D8845370C740BD421ACCE5309627");
 	var lib=comp.getLibrary();
 	var loader = new createjs.LoadQueue(false);
 	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
@@ -42,7 +42,7 @@ function handleComplete(evt,comp) {
 	for(i=0; i<ssMetadata.length; i++) {
 		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
 	}
-	exportRoot = new lib.headerhtml5();
+	exportRoot = new lib.Untitled4();
 	stage = new lib.Stage(canvas);	
 	//Registers the "tick" event listener.
 	fnStartAnimation = function() {
@@ -58,30 +58,19 @@ function handleComplete(evt,comp) {
 </script>
 <!-- write your code here -->
 </head>
-<body onload="init();" style="display: block;margin-left: auto;margin-right: auto;">
-	<div id="animation_container" style="background-color:rgba(255, 255, 255, 0.00); width:861px; height:143px">
-		<canvas id="canvas" width="861" height="143" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0.00);"></canvas>
-		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:861px; height:143px; position: absolute; left: 0px; top: 0px; display: block;">
+<body onload="init();" style="margin:0px;">
+	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:550px; height:400px">
+		<canvas id="canvas" width="550" height="400" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:550px; height:400px; position: absolute; left: 0px; top: 0px; display: block;">
 		</div>
 	</div>
 </body>
 <style>
-	@font-face { 
-		font-family: ComicSans; src: url('fonts/comic.ttf'); 
-	} 
 	body {
 		background-color: black;
 	}
-</style> 
-<a href="games">
-	<img src="images/games.png" alt="games" style="display: block;margin-left: auto;margin-right: auto;margin-top:100px;"> 
-</a>
-<br>
-<a href="links">
-	<img src="images/links.png" alt="links" style="display: block;margin-left: auto;margin-right: auto;margin-top:100px;"> 
-</a>
-<br>
-<a href="singy-song">
-	<img src="images/extra.png" alt="???" style="display: block;margin-left: auto;margin-right: auto;margin-top:100px;"> 
-</a>
+</style>
+<audio controls autoplay>
+	<source src="singy song.mp3" type="audio/mpeg">
+  </audio> 
 </html>
