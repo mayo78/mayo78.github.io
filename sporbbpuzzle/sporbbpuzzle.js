@@ -921,7 +921,7 @@ ApplicationMain.main = function() {
 ApplicationMain.create = function(config) {
 	var app = new openfl_display_Application();
 	ManifestResources.init(config);
-	app.meta.h["build"] = "11";
+	app.meta.h["build"] = "12";
 	app.meta.h["company"] = "HaxeFlixel";
 	app.meta.h["file"] = "sporbbpuzzle";
 	app.meta.h["name"] = "sporbbpuzzle";
@@ -40272,99 +40272,12 @@ flixel_system_FlxPreloader.prototype = $extend(flixel_system_FlxBasePreloader.pr
 	,_logo: null
 	,_logoGlow: null
 	,create: function() {
-		var _gthis = this;
-		this._buffer = new openfl_display_Sprite();
-		this._buffer.set_scaleX(this._buffer.set_scaleY(2));
-		this.addChild(this._buffer);
-		this._width = openfl_Lib.get_current().stage.stageWidth / this._buffer.get_scaleX() | 0;
-		this._height = openfl_Lib.get_current().stage.stageHeight / this._buffer.get_scaleY() | 0;
-		this._buffer.addChild(new openfl_display_Bitmap(new openfl_display_BitmapData(this._width,this._height,false,13406)));
-		var logoLight = this.createBitmap(flixel_system__$FlxPreloader_GraphicLogoLight,function(logoLight) {
-			logoLight.set_width(logoLight.set_height(_gthis._height));
-			logoLight.set_x((_gthis._width - logoLight.get_width()) / 2);
-		});
-		logoLight.smoothing = true;
-		this._buffer.addChild(logoLight);
-		this._bmpBar = new openfl_display_Bitmap(new openfl_display_BitmapData(1,7,false,6253311));
-		this._bmpBar.set_x(4);
-		this._bmpBar.set_y(this._height - 11);
-		this._buffer.addChild(this._bmpBar);
-		this._text = new openfl_text_TextField();
-		this._text.set_defaultTextFormat(new openfl_text_TextFormat(flixel_system_FlxAssets.FONT_DEFAULT,8,6253311));
-		this._text.set_embedFonts(true);
-		this._text.set_selectable(false);
-		this._text.set_multiline(false);
-		this._text.set_x(2);
-		this._text.set_y(this._bmpBar.get_y() - 11);
-		this._text.set_width(200);
-		this._buffer.addChild(this._text);
-		this._logo = new openfl_display_Sprite();
-		flixel_system_FlxAssets.drawLogo(this._logo.get_graphics());
-		this._logo.set_scaleX(this._logo.set_scaleY(this._height / 8 * 0.04));
-		this._logo.set_x((this._width - this._logo.get_width()) / 2);
-		this._logo.set_y((this._height - this._logo.get_height()) / 2);
-		this._buffer.addChild(this._logo);
-		this._logoGlow = new openfl_display_Sprite();
-		flixel_system_FlxAssets.drawLogo(this._logoGlow.get_graphics());
-		this._logoGlow.set_blendMode(12);
-		this._logoGlow.set_scaleX(this._logoGlow.set_scaleY(this._height / 8 * 0.04));
-		this._logoGlow.set_x((this._width - this._logoGlow.get_width()) / 2);
-		this._logoGlow.set_y((this._height - this._logoGlow.get_height()) / 2);
-		this._buffer.addChild(this._logoGlow);
-		var corners = this.createBitmap(flixel_system__$FlxPreloader_GraphicLogoCorners,function(corners) {
-			corners.set_width(_gthis._width);
-			corners.set_height(_gthis.get_height());
-		});
-		corners.smoothing = true;
-		this._buffer.addChild(corners);
-		var bitmap = new openfl_display_Bitmap(new openfl_display_BitmapData(this._width,this._height,false,16777215));
-		var i = 0;
-		var j = 0;
-		while(i < this._height) {
-			j = 0;
-			while(j < this._width) bitmap.get_bitmapData().setPixel(j++,i,0);
-			i += 2;
-		}
-		bitmap.set_blendMode(11);
-		bitmap.set_alpha(0.25);
-		this._buffer.addChild(bitmap);
 		flixel_system_FlxBasePreloader.prototype.create.call(this);
 	}
 	,destroy: function() {
-		if(this._buffer != null) {
-			this.removeChild(this._buffer);
-		}
-		this._buffer = null;
-		this._bmpBar = null;
-		this._text = null;
-		this._logo = null;
-		this._logoGlow = null;
 		flixel_system_FlxBasePreloader.prototype.destroy.call(this);
 	}
 	,update: function(Percent) {
-		this._bmpBar.set_scaleX(Percent * (this._width - 8));
-		this._text.set_text(Std.string(flixel_FlxG.VERSION) + " " + (Percent * 100 | 0) + "%");
-		if(Percent < 0.1) {
-			this._logoGlow.set_alpha(0);
-			this._logo.set_alpha(0);
-		} else if(Percent < 0.15) {
-			this._logoGlow.set_alpha(Math.random());
-			this._logo.set_alpha(0);
-		} else if(Percent < 0.2) {
-			this._logoGlow.set_alpha(0);
-			this._logo.set_alpha(0);
-		} else if(Percent < 0.25) {
-			this._logoGlow.set_alpha(0);
-			this._logo.set_alpha(Math.random());
-		} else if(Percent < 0.7) {
-			this._logoGlow.set_alpha((Percent - 0.45) / 0.45);
-			this._logo.set_alpha(1);
-		} else if(Percent > 0.8 && Percent < 0.9) {
-			this._logoGlow.set_alpha(1 - (Percent - 0.8) / 0.1);
-			this._logo.set_alpha(0);
-		} else if(Percent > 0.9) {
-			this._buffer.set_alpha(1 - (Percent - 0.9) / 0.1);
-		}
 	}
 	,__class__: flixel_system_FlxPreloader
 });
@@ -74760,7 +74673,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 548490;
+	this.version = 384849;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
