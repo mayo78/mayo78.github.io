@@ -921,7 +921,7 @@ ApplicationMain.main = function() {
 ApplicationMain.create = function(config) {
 	var app = new openfl_display_Application();
 	ManifestResources.init(config);
-	app.meta.h["build"] = "12";
+	app.meta.h["build"] = "15";
 	app.meta.h["company"] = "HaxeFlixel";
 	app.meta.h["file"] = "sporbbpuzzle";
 	app.meta.h["name"] = "sporbbpuzzle";
@@ -5087,6 +5087,41 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 							this.swapTile(this.dortas.gridX,this.dortas.gridY + 1);
 						}
 					}
+				}
+			}
+		}
+		var _this = flixel_FlxG.keys.justPressed;
+		if(_this.keyManager.checkStatusUnsafe(67,_this.status)) {
+			var _g = 0;
+			var _g1 = this.tiles.members;
+			while(_g < _g1.length) {
+				var i = _g1[_g];
+				++_g;
+				if(i != this.dortas) {
+					var tmp;
+					var _this = flixel_FlxG.keys.pressed;
+					if(_this.keyManager.checkStatusUnsafe(16,_this.status)) {
+						tmp = -1;
+					} else {
+						var Red = flixel_FlxG.random.int(0,255);
+						var Green = flixel_FlxG.random.int(0,255);
+						var Blue = flixel_FlxG.random.int(0,255);
+						var color = flixel_util_FlxColor._new();
+						var Alpha = 255;
+						if(Alpha == null) {
+							Alpha = 255;
+						}
+						color &= -16711681;
+						color |= (Red > 255 ? 255 : Red < 0 ? 0 : Red) << 16;
+						color &= -65281;
+						color |= (Green > 255 ? 255 : Green < 0 ? 0 : Green) << 8;
+						color &= -256;
+						color |= Blue > 255 ? 255 : Blue < 0 ? 0 : Blue;
+						color &= 16777215;
+						color |= (Alpha > 255 ? 255 : Alpha < 0 ? 0 : Alpha) << 24;
+						tmp = color;
+					}
+					i.set_color(tmp);
 				}
 			}
 		}
@@ -74673,7 +74708,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 384849;
+	this.version = 317590;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
